@@ -52,7 +52,8 @@
 }
 
 html {
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
@@ -60,7 +61,16 @@ body {
   font-family: "Lora", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: var(--bg);
   color: var(--text-main);
-  line-height: 1.6
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Global utility */
@@ -245,9 +255,9 @@ body {
 
 .pre-hero {
   background-image: url("images/plum velvet.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  background-position: top center;
   height: 55vh;
   text-align: center;
   align-items: center;
@@ -574,6 +584,16 @@ body {
   background-color: var(--bg-alt);
 }
 
+#portfolio {
+  background-image: url("images/portfolio__background.jpg");
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: repeat-y;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 /* services use flex for easier responsive control */
 .services-grid {
   display: flex;
@@ -842,12 +862,16 @@ textarea:focus {
 /* Portfolio intro hero background */
 #portfolio-intro {
   background-image: url("images/brown velvet.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 6rem 0;
+  background-size: auto;
+  background-position: top left;
+  background-repeat: repeat;
+  height: 10vh;
+  padding: 0;
   color: #fff;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #portfolio-intro::before {
@@ -858,7 +882,11 @@ textarea:focus {
   pointer-events: none;
 }
 
-#portfolio-intro .section-header { position: relative; z-index: 1; }
+#portfolio-intro .section-header { 
+  position: relative; 
+  z-index: 1; 
+  margin: 0 auto;
+}
 
 @media (max-width: 640px) {
   #portfolio-intro { padding: 3.5rem 0; }
