@@ -1,89 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Orchid Quill | Bespoke Wedding Stationery & Paper Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Orchid Quill is a bespoke wedding stationery and paper studio, crafting luxurious, heartfelt designs for modern romantics."
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Orchid Quill | Bespoke Wedding Stationery & Paper Studio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Orchid Quill is a bespoke wedding stationery and paper studio, crafting luxurious, heartfelt designs for modern romantics." />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@300;400;500;600&display=swap"
-    rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lancelot&display=swap"
+      rel="stylesheet"
+    />
 
-  <link href="https://fonts.googleapis.com/css2?family=Lancelot&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <body>
+    <!-- Header / Navigation -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#home" class="logo">
+          <span class="logo-main">Orchid Quill</span>
+        </a>
 
-<body>
-  <!-- Header / Navigation -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#home" class="logo">
-        <span class="logo-main">Orchid Quill</span>
-      </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+        </button>
 
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span class="nav-toggle-line"></span>
-        <span class="nav-toggle-line"></span>
-      </button>
-
-      <nav class="site-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="home">
-    <section class="pre-hero">
-      <div class="pre-hero-logo">
-        <div class="hero-photos" aria-label="Portfolio photos">
-          <img src="images/Orchid Quill Logo.svg" alt="Portfolio 1" />
-        </div>
-        <p class="eyebrow">Bespoke Wedding Stationery</p>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <section class="hero">
-      <div class="hero-box">
-        <div class="hero-copy">
-          <p>We design one-of-a-kind invitations that are as unique as the love stories they represent.</p>
+    <main id="home">
+      <section class="pre-hero">
+        <div class="pre-hero-logo">
           <div class="hero-photos" aria-label="Portfolio photos">
-            <img src="images/main1.png" alt="Portfolio 1" />
-            <img src="images/main2.png" alt="Portfolio 2" />
-            <img src="images/main3.png" alt="Portfolio 3" />
+            <img src="images/Orchid Quill Logo.svg" alt="Portfolio 1" />
           </div>
-          <p>More than just an invitation, it's a timeless work of art.</p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Enquire Now</a>
+          <p class="eyebrow">Bespoke Wedding Stationery</p>
+        </div>
+      </section>
+
+      <section class="hero">
+        <div class="hero-box">
+          <div class="hero-copy">
+            <p>
+              We design one-of-a-kind invitations that are as unique as the love
+              stories they represent.
+            </p>
+            <div class="hero-photos" aria-label="Portfolio photos">
+              <img src="images/main1.png" alt="Portfolio 1" />
+              <img src="images/main2.png" alt="Portfolio 2" />
+              <img src="images/main3.png" alt="Portfolio 3" />
+            </div>
+            <p>More than just an invitation, it's a timeless work of art.</p>
+            <div class="hero-actions">
+              <a href="contact.html" class="btn btn-primary">Enquire Now</a>
+            </div>
           </div>
         </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> Orchil Quill. All rights reserved.</p>
+        <p class="footer-note">
+          Crafted with care for couples who love beautiful details.
+        </p>
       </div>
-    </section>
-    
-  </main>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Orchil Quill. All rights reserved.</p>
-      <p class="footer-note">
-        Crafted with care for couples who love beautiful details.
-      </p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>

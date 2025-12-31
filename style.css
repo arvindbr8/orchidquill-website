@@ -260,8 +260,11 @@ main {
   background-position: top center;
   height: 55vh;
   text-align: center;
+  display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  position: relative;
+  z-index: 0;
 }
 
 /* Stack logo and eyebrow vertically inside pre-hero */
@@ -329,7 +332,8 @@ main {
   padding: 2rem;
   position: relative;
   display: flex;
-  align-items: center
+  align-items: center;
+  z-index: 0;
 }
 
 /* hero layout simplified to flex */
