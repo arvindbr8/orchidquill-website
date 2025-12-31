@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Orchid Quill — Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact — Orchid Quill" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lancelot&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-main">Orchid Quill</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Contact Section -->
+    <section id="contact" class="section section-contact">
+      <div class="container contact-inner">
+        <div class="contact-copy">
+          <p class="eyebrow">Enquire</p>
+          <h2>Share your wedding story.</h2>
+          <p class="section-intro">
+            Tell us about your celebration, your vision, and the details that
+            matter most. You’ll receive a warm, personal response with next
+            steps and availability.
+          </p>
+
+          <div class="contact-details">
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:hello@orchilquill.com">hello@orchilquill.com</a>
+            </p>
+            <!-- Add your real links when ready -->
+            <p>
+              <strong>Instagram:</strong>
+              <a href="https://www.instagram.com/orchid_quill/" target="_blank" rel="noreferrer">@orchidquill</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Name<span>*</span></label>
+              <input type="text" id="name" name="name" required />
+              <p class="form-error" data-error-for="name"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email<span>*</span></label>
+              <input type="email" id="email" name="email" required />
+              <p class="form-error" data-error-for="email"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="date">Wedding Date (optional)</label>
+              <input type="date" id="date" name="date" />
+              <p class="form-error" data-error-for="date"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message<span>*</span></label>
+              <textarea id="message" name="message" rows="5"
+                placeholder="Share your venue, guest count, and the mood you’re dreaming of…" required></textarea>
+              <p class="form-error" data-error-for="message"></p>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              Send Enquiry
+            </button>
+
+            <p class="form-success" id="form-success-message" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Orchil Quill. All rights reserved.</p>
+      <p class="footer-note">
+        Crafted with care for couples who love beautiful details.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

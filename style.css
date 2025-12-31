@@ -838,3 +838,44 @@ textarea:focus {
   flex-direction: column;
   gap: .8rem
 }
+
+/* Portfolio intro hero background */
+#portfolio-intro {
+  background-image: url("images/brown velvet.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6rem 0;
+  color: #fff;
+  position: relative;
+}
+
+#portfolio-intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  pointer-events: none;
+}
+
+#portfolio-intro .section-header { position: relative; z-index: 1; }
+
+@media (max-width: 640px) {
+  #portfolio-intro { padding: 3.5rem 0; }
+}
+
+/* Increase eyebrow size and constrain intro width for portfolio intro */
+#portfolio-intro .eyebrow {
+  font-size: 1.8rem;
+  letter-spacing: 0.18em;
+}
+
+#portfolio-intro .container {
+  width: min(840px, 100% - 3rem);
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  #portfolio-intro .eyebrow { font-size: 1.4rem; }
+  #portfolio-intro .container { width: calc(100% - 2rem); }
+}
