@@ -35,3 +35,64 @@ if (form) form.addEventListener('submit', e => {
 
 // Dynamic year in footer
 const yearEl = document.getElementById('year'); if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// Portfolio Lightbox
+const lightboxModal = document.getElementById('lightbox-modal');
+const lightboxImage = document.querySelector('.lightbox-image');
+const lightboxClose = document.querySelector('.lightbox-close');
+const lightboxOverlay = document.querySelector('.lightbox-overlay');
+const portfolioItems = document.querySelectorAll('.portfolio-item img');
+
+// Open lightbox
+function openLightbox(imgSrc, imgAlt) {
+  if (lightboxImage && lightboxModal) {
+    lightboxImage.src = imgSrc;
+    lightboxImage.alt = imgAlt;
+    lightboxModal.classList.add('is-open');
+    lightboxModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  }
+}
+
+// Close lightbox
+function closeLightbox() {
+  if (lightboxModal) {
+    lightboxModal.classList.remove('is-open');
+    lightboxModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = ''; // Restore scrolling
+  }
+}
+
+// Add click/touch event listeners to portfolio images
+if (portfolioItems.length > 0) {
+  portfolioItems.forEach(img => {
+    // Handle both click and touch events
+    img.addEventListener('click', (e) => {
+      e.preventDefault();
+      openLightbox(img.src, img.alt);
+    });
+    
+    // Touch event for mobile devices
+    img.addEventListener('touchend', (e) => {
+      e.preventDefault();
+      openLightbox(img.src, img.alt);
+    });
+  });
+}
+
+// Close lightbox on close button click
+if (lightboxClose) {
+  lightboxClose.addEventListener('click', closeLightbox);
+}
+
+// Close lightbox on overlay click
+if (lightboxOverlay) {
+  lightboxOverlay.addEventListener('click', closeLightbox);
+}
+
+// Close lightbox on ESC key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && lightboxModal && lightboxModal.classList.contains('is-open')) {
+    closeLightbox();
+  }
+});
